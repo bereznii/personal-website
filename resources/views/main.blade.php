@@ -18,7 +18,8 @@
   
   <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  
+  <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+
   <!-- Custom CSS for this template -->
   <link href="{{ asset('css/resume.min.css') }}" rel="stylesheet">
 
@@ -30,7 +31,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Clarence Taylor</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ asset('photo_2018-10-09_21-24-57.jpg')}}" alt="">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
