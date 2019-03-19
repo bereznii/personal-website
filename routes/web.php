@@ -11,9 +11,18 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('main');
-});
+    return view('pages.mywork');
+})->name('mywork');
+
+Route::get('/software', function () {
+    return view('pages.software');
+})->name('software');
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
 
 Auth::routes();
 
