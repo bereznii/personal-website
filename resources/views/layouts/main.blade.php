@@ -18,7 +18,6 @@
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="{{asset('css/creative.min.css')}}" rel="stylesheet">
 
@@ -33,28 +32,50 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="collapse navbar-collapse shift" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item">
+          <li class="nav-item text-center">
             <a class="nav-link" href="{{route('mywork')}}">My Work</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('software')}}">Software</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('contact')}}">Contact</a>
+            <a class="nav-link text-center" href="{{route('contact')}}">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-    @yield('page')
+  @yield('page')
 
   <!-- Footer -->
-  <footer class="bg-light py-5">
+  <!-- Contact Section -->
+  <section class="bg-dark page-section py-5">
     <div class="container">
-      <div class="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h5 class="mt-0 pb-4 text-light text-uppercase">Stay Connected</h5>
+          <a href='https://www.instagram.com/bereznii_/'><img class='contact-icon' src="{{asset('img/instagram.svg')}}"></a>
+          <a href='https://www.facebook.com/profile.php?id=100008971929484'><img class='contact-icon' src="{{asset('img/facebook.svg')}}"></a>
+          <a href='https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%B1%D0%B5%D1%80%D0%B5%D0%B7%D0%BD%D0%B8%D0%B9-75173b177/'><img class='contact-icon' src="{{asset('img/linkedin.svg')}}"></a>
+          <a href="{{route('contact')}}"><img class='contact-icon' src="{{asset('img/mail.svg')}}"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col col-md"><a class='text-light' href="{{route('mywork')}}">My Work</a></div>
+        <div class="col col-md text-light">|</div>
+        <div class="col col-md"><a class='text-light' href="{{route('software')}}">Software</a></div>
+        <div class="col col-md text-light">|</div>
+        <div class="col col-md"><a class='text-light' href="{{route('contact')}}">Contact</a></div>
+      </div>
+      <!--<div class="small text-center text-muted">Copyright &copy; {{date("Y")}} - Dmytro Bereznii</div>-->
     </div>
   </footer>
 

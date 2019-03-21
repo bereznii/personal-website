@@ -1,0 +1,29 @@
+.navbar-brand { 
+    color: #191919 !important;
+    font-weight: 600 !important;
+}
+.nav-link { 
+    color: #191919 !important; 
+    font-weight: 600 !important;
+} 
+
+.navbar-brand:hover, .nav-link:hover { 
+    color: #f4623a !important;
+} 
+
+.navbar-scrolled .navbar-brand {
+    font-weight: 100 !important;
+} 
+.navbar-scrolled .nav-link {
+    font-weight: 100 !important;
+} 
+
+
+.contact-section {
+    padding-top: 7rem;
+}
+
+label {
+    padding-top: 1em;
+}
+

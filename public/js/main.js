@@ -28,10 +28,14 @@
   
     // Collapse Navbar
     var navbarCollapse = function() {
-      if ($("#mainNav").offset().top > 100) {
+      if ($("#mainNav").offset().top > 80) {
         $("#mainNav").addClass("navbar-scrolled");
+        $("#mainNav").removeClass("py-4");
+        $("#mainNav").addClass("py-2");
       } else {
         $("#mainNav").removeClass("navbar-scrolled");
+        $("#mainNav").removeClass("py-2");
+        $("#mainNav").addClass("py-4");
       }
     };
     // Collapse now if page is not at top

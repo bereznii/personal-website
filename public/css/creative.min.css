@@ -10589,7 +10589,7 @@
   }
   
   .page-section {
-    padding: 8rem 0;
+    padding: 2rem 0;
   }
   
   #mainNav {
@@ -10641,9 +10641,9 @@
     #mainNav .navbar-nav .nav-item .nav-link:hover {
       color: #fff;
     }
-    #mainNav .navbar-nav .nav-item:last-child .nav-link {
+    /*#mainNav .navbar-nav .nav-item:last-child .nav-link {
       padding-right: 0;
-    }
+    }*/
     #mainNav.navbar-scrolled {
       -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -10750,3 +10750,39 @@
   #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
     opacity: 1;
   }
+
+/*CUSTOM*/
+div.col.col-md {
+  text-align: center;
+}
+
+.h5spacing {
+  padding-bottom: 1em;
+}
+
+h2.text-uppercase {
+  letter-spacing: 0.15em;
+}
+
+p.text-light {
+  letter-spacing: 0.1em;
+}
+
+.contact-icon {
+  max-height: 2em;
+  max-width: 2em;
+  fill: black;
+}
+
+.bg-black {
+  background-color: #191919 !important;
+  color: white !important;
+}
+
+.bg-dark {
+  background-color: #282828 !important;
+}
+
+.project-repositories {
+  padding-top: 7em;
+}
