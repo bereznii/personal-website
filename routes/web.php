@@ -11,18 +11,11 @@
 |
 */
 
+//FRONT-END pages
+Route::get('/', 'FrontEndController@mywork')->name('mywork');
+Route::get('/software', 'FrontEndController@software')->name('software');
+Route::get('/contact', 'FrontEndController@contact')->name('contact');
 
-Route::get('/', function () {
-    return view('pages.mywork');
-})->name('mywork');
-
-Route::get('/software', function () {
-    return view('pages.software');
-})->name('software');
-
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
 
 Auth::routes();
 
