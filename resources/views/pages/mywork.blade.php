@@ -18,7 +18,7 @@
   <!-- About Section -->
   <section class="page-section bg-black">
     <div class="container py-5">
-      <h2 class='text-uppercase pb-5'>My Work</h5>
+      <h2 class='text-uppercase pb-5'>My Work</h2>
       <p class='text-light'>I am a computer systems and network course student, who is interested in designing and developing computer networks and web-development overall. 
       Not the best student and not one of those who learn everything by heart, to pretend they understand it. 
       But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into practice.</p>
