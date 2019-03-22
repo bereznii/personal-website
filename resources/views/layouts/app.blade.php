@@ -73,7 +73,21 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                            <ul class="list-group">
+                                <a href="{{route('texts')}}"><li class="list-group-item list-group-item-action @if($uri == 'texts') active @endif">Texts</li></a>
+                                <a href="{{route('users')}}"><li class="list-group-item list-group-item-action @if($uri == 'users') active @endif">Users</li></a>
+                                <a href="{{route('jobs')}}"><li class="list-group-item list-group-item-action @if($uri == 'jobs') active @endif">Jobs</li></a>
+                            </ul>
+                    </div>
+                    <div class="col-md-9">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
+            
         </main>
     </div>
 </body>

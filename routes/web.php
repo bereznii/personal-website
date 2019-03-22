@@ -19,4 +19,7 @@ Route::get('/contact', 'FrontEndController@contact')->name('contact');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('admin');
+Route::get('/texts', 'HomeController@texts')->name('texts');
+Route::get('/users', 'HomeController@users')->name('users');
+Route::get('/jobs', 'HomeController@jobs')->name('jobs');

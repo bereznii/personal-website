@@ -3,7 +3,16 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-3">
+            <div class="card">
+                <ul class="list-group">
+                    <a href='#'><li class="list-group-item">Texts</li></a>
+                    <a href='#'><li class="list-group-item">Users</li></a>
+                    <a href='#'><li class="list-group-item">Jobs</li></a>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9">
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
