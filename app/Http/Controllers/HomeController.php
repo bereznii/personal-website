@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 
-use App\Text;
+use App\Project;
 
 class HomeController extends Controller
 {
@@ -30,16 +30,16 @@ class HomeController extends Controller
     }
 
     /**
-     * Shows texts.
+     * Shows projects.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function texts()
+    public function projects()
     {
-        //$texts = Text::get();
-        //dd($texts);
-        $uri = $this->getCurrentURI();
-        //return view('admin.texts', ['uri' => $uri, 'texts' => $texts]);
+        //Project::getProjects();
+        dd(Project::get());
+        //$uri = $this->getCurrentURI();
+        //return view('admin.projects', ['uri' => $uri]);
     }
 
     /**

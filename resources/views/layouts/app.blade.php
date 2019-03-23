@@ -72,16 +72,20 @@
             </div>
         </nav>
 
+        
+        
         <main class="py-4">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-3">
+                    @auth
+                        <div class="col-md-3">
                             <ul class="list-group">
-                                <a href="{{route('texts')}}"><li class="list-group-item list-group-item-action @if($uri == 'texts') active @endif">Texts</li></a>
-                                <a href="{{route('users')}}"><li class="list-group-item list-group-item-action @if($uri == 'users') active @endif">Users</li></a>
-                                <a href="{{route('jobs')}}"><li class="list-group-item list-group-item-action @if($uri == 'jobs') active @endif">Jobs</li></a>
+                                <a href="{{route('projects')}}"><li class="list-group-item list-group-item-action @if(isset($uri) && $uri == 'projects') active @endif">Projects</li></a>
+                                <a href="{{route('users')}}"><li class="list-group-item list-group-item-action @if(isset($uri) && $uri == 'users') active @endif">Users</li></a>
+                                <a href="{{route('jobs')}}"><li class="list-group-item list-group-item-action @if(isset($uri) && $uri == 'jobs') active @endif">Jobs</li></a>
                             </ul>
-                    </div>
+                        </div>
+                    @endauth
                     <div class="col-md-9">
                         @yield('content')
                     </div>
@@ -89,6 +93,7 @@
             </div>
             
         </main>
+        
     </div>
 </body>
 </html>

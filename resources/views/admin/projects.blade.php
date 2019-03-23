@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="card">
-    <div class="card-header">TEXTS</div>
+    <div class="card-header">PROJECTS</div>
 
     <div class="card-body">
-        texts...{{$uri}}
+        projects...{{$uri}}
     </div>
 </div>
 @endsection

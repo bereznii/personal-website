@@ -15,7 +15,7 @@
     </div>
   </header>
 
-  <!-- About Section -->
+  <!-- About My Work -->
   <section class="page-section bg-black">
     <div class="container py-5">
       <h2 class='text-uppercase pb-5'>My Work</h2>
@@ -25,7 +25,7 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Projects Section -->
   <section class="page-section">
     <div class="container py-4">
         <h5 class='h5spacing'>Last Projects (from GitHub)</h5>
@@ -60,6 +60,8 @@
           </tbody>
         </table>
     </div>
+
+    <!-- Ventures Section -->
     <div class="container py-4">
         <h5 class='h5spacing'>Future Ventures (teach myself in 2019)</h5>
         <ul>

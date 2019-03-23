@@ -41,7 +41,7 @@
     </div>
   </section>
 
-   <!-- About Section -->
+   <!-- Platform Section -->
    <section class="page-section bg-black">
     <div class="container py-5">
       <h2 class='text-uppercase'>This Platform</h2>
@@ -52,6 +52,8 @@
       This front-end pages are just a cover for everything going on in the background. ...
       </p>
     </div>
+
+    <!-- Stack Section -->
     <div class="container py-5">
       <h2 class='text-uppercase'>Technology stack</h2>
       <p class="text-uppercase pb-3 stack-text">My Website Architecture</p>
