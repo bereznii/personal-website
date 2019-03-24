@@ -14,28 +14,24 @@
               <th scope="col">Title</th>
               <th scope="col">Description</th>
               <th scope="col">Language</th>
+              <th scope="col">Created</th>
+              <th scope="col">Updated</th>
+              <th scope="col">Size (kb)</th>
               <th scope="col">Commits</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+            @foreach($projects as $project)
+              <td><a class='project_name' href='{{$project->html_url}}'>{{$project->name}}</a></th>
+              <td>{{$project->description}}</td>
+              <td>{{$project->language}}</td>
+              <td>{{$project->created}}</td>
+              <td>{{$project->updated}}</td>
+              <td>{{$project->size}}</td>
+              <td>{{$project->commits}}</td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            @endforeach
           </tbody>
         </table>
     </div>

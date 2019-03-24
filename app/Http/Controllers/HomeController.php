@@ -36,10 +36,9 @@ class HomeController extends Controller
      */
     public function projects()
     {
-        //Project::getProjects();
-        dd(Project::get());
-        //$uri = $this->getCurrentURI();
-        //return view('admin.projects', ['uri' => $uri]);
+        $projects = Project::get();
+        $uri = $this->getCurrentURI();
+        return view('admin.projects', ['uri' => $uri, 'projects' => $projects]);
     }
 
     /**

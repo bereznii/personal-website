@@ -18,10 +18,11 @@ class CreateProjectsTable extends Migration
             $table->string('name');
             $table->string('html_url');
             $table->string('language');
-            $table->string('size');
-            $table->string('description')->nullable();
-            $table->string('created');
-            $table->string('updated');
+            $table->integer('size');
+            $table->text('description')->nullable();
+            $table->integer('commits');
+            $table->date('created');
+            $table->date('updated');
             $table->timestamps();
         });
     }

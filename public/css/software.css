@@ -28,3 +28,7 @@
 .stack-text ul {
   padding-left: 2em;
 }
+
+a.project_name {
+  color: black;
+}

@@ -14,9 +14,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="{{asset('css/creative.min.css')}}" rel="stylesheet">
@@ -37,7 +36,7 @@
           <li class="nav-item text-center">
             <a class="nav-link" href="{{route('mywork')}}">My Work</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item text-center">
             <a class="nav-link" href="{{route('software')}}">Software</a>
           </li>
           <li class="nav-item">

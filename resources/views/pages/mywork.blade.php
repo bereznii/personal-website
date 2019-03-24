@@ -9,7 +9,7 @@
           <h1 class="text-uppercase text-white">Dmytro Bereznii</h1>
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <h3 class="text-white-75 font-weight-light mb-5">Self-learning software engineering and architecture through research & development.</h3>
+          <h4 class="text-white-75 font-weight-light mb-5">Self-learning software engineering and architecture through research & development.</h4>
         </div>
       </div>
     </div>
@@ -29,34 +29,24 @@
   <section class="page-section">
     <div class="container py-4">
         <h5 class='h5spacing'>Last Projects (from GitHub)</h5>
-        <table class="table">
+        <table class="table table-hover">
           <thead>
             <tr>
               <th scope="col">Title</th>
               <th scope="col">Description</th>
               <th scope="col">Language</th>
-              <th scope="col">Commits</th>
+              <th scope="col">Updated</th>
             </tr>
           </thead>
           <tbody>
+            @foreach($projects as $project)
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td>{{$project->name}}</th>
+              <td>{{$project->description}}</td>
+              <td>{{$project->language}}</td>
+              <td>{{$project->updated}}</td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            @endforeach
           </tbody>
         </table>
     </div>
