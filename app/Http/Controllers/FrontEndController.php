@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 use App\Project;
+use App\Jobs\SendEmailJob;
 
 class FrontEndController extends Controller
 {
@@ -34,5 +36,15 @@ class FrontEndController extends Controller
     public function contact()
     {
         return view('pages.contact');
+    }
+
+    /**
+     * Sends email.
+     */
+    public function sendEmail(Request $request)
+    {
+        SendEmailJob::dispatch($request->all())->delay(now()->addSeconds(5));
+
+        return redirect()->route('contact');
     }
 }

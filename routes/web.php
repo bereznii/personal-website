@@ -15,7 +15,7 @@
 Route::get('/', 'FrontEndController@mywork')->name('mywork');
 Route::get('/software', 'FrontEndController@software')->name('software');
 Route::get('/contact', 'FrontEndController@contact')->name('contact');
-
+Route::post('/send_email', 'FrontEndController@sendEmail')->name('send_email');
 
 Auth::routes();
 
