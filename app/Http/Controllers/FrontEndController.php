@@ -47,4 +47,5 @@ class FrontEndController extends Controller
 
         return redirect()->route('contact');
     }
+
 }

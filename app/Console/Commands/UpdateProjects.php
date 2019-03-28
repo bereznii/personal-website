@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 
 use App\Project;
+use App\History;
 
 class UpdateProjects extends Command
 {
@@ -66,6 +67,13 @@ class UpdateProjects extends Command
 
             $project->save();
         }
+
+        //saving job
+        $record = new History;
+        $record->type = 'updating projects';
+        $info = ['file' => __FILE__,'namespace' => __NAMESPACE__,'method' => __METHOD__,'line' => __LINE__];
+        $record->payload = json_encode($info);
+        $record->save();
 
         echo "Projects updated \n";
     }

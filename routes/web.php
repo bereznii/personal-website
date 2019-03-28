@@ -19,7 +19,9 @@ Route::post('/send_email', 'FrontEndController@sendEmail')->name('send_email');
 
 Auth::routes();
 
+//ADMIN PAGES
 Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('/projects', 'HomeController@projects')->name('projects');
-Route::get('/users', 'HomeController@users')->name('users');
 Route::get('/jobs', 'HomeController@jobs')->name('jobs');
+Route::get('/letters', 'HomeController@letters')->name('letters');
+Route::get('/letter/{id}', 'HomeController@openLetter')->name('letter');

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 
 use App\Project;
+use App\History;
+use App\Letter;
 
 class HomeController extends Controller
 {
@@ -42,31 +44,47 @@ class HomeController extends Controller
     }
 
     /**
-     * Shows users.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function users()
-    {
-        $uri = $this->getCurrentURI();
-        return view('admin.users')->with('uri', $uri);
-    }
-
-    /**
      * Shows jobs.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function jobs()
     {
+        $history = History::orderBy('id', 'DESC')->paginate(10);
+        foreach($history as $record) {
+            $payloads[] = json_decode($record->payload);
+        }
+
         $uri = $this->getCurrentURI();
-        return view('admin.jobs')->with('uri', $uri);
+        return view('admin.jobs', ['uri' => $uri, 'history' => $history, 'payloads' => $payloads]);
+    }
+
+    /**
+     * Shows sended letters
+     */
+    public function letters()
+    {
+        $letters = Letter::orderBy('id', 'DESC')->paginate(10);
+
+        $uri = $this->getCurrentURI();
+        return view('admin.letters', ['uri' => $uri, 'letters' => $letters]);
+    }
+
+    /**
+     * Shows specified letter
+     */
+    public function openLetter($id)
+    {
+        $letter = Letter::find($id);
+
+        $uri = $this->getCurrentURI();
+        return view('admin.openletter', ['uri' => $uri, 'letter' => $letter]);
     }
 
     /**
      * Get current URI.
      */
-    public function getCurrentURI()
+    protected function getCurrentURI()
     {
         $url = URL::current();
         $uri = array_reverse(explode('/', $url))[0];

@@ -7,10 +7,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Bereznii Admin</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -81,8 +86,8 @@
                         <div class="col-md-3">
                             <ul class="list-group">
                                 <a href="{{route('projects')}}"><li class="list-group-item list-group-item-action @if(isset($uri) && $uri == 'projects') active @endif">Projects</li></a>
-                                <a href="{{route('users')}}"><li class="list-group-item list-group-item-action @if(isset($uri) && $uri == 'users') active @endif">Users</li></a>
                                 <a href="{{route('jobs')}}"><li class="list-group-item list-group-item-action @if(isset($uri) && $uri == 'jobs') active @endif">Jobs</li></a>
+                                <a href="{{route('letters')}}"><li class="list-group-item list-group-item-action @if(isset($uri) && $uri == 'letters') active @endif">Letters</li></a>
                             </ul>
                         </div>
                     @endauth
