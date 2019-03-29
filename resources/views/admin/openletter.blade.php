@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="card">
+<div class="card border-primary">
     <div class="card-header">Open letter #{{$letter->id}}</div>
     <div class="card-body">
         <p><strong>Subject:</strong> {{$letter->subject}}.</p>
