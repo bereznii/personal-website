@@ -11,6 +11,9 @@
 |
 */
 
+//FRONT-VUE
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+
 //FRONT-END pages
 Route::get('/', 'FrontEndController@mywork')->name('mywork');
 Route::get('/software', 'FrontEndController@software')->name('software');
