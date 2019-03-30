@@ -10646,8 +10646,9 @@
     }*/
     #mainNav.navbar-scrolled {
       -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);  
       background-color: #fff;
+      opacity: 0.9;
     }
     #mainNav.navbar-scrolled .navbar-brand {
       color: #212529;
@@ -10790,3 +10791,10 @@ p.text-light {
 .project-repositories {
   padding-top: 7em;
 }
+
+.navbar-scrolled .navbar-brand {
+  font-weight: 400 !important;
+} 
+.navbar-scrolled .nav-link {
+  font-weight: 400 !important;
+} 

@@ -16,7 +16,7 @@ const router = new VueRouter({
         {
             path: '/',
             children: [
-                { path: '', component: MyWork },
+                { path: '/', component: MyWork },
             ],
             name: 'navigation',
             component: Navigation

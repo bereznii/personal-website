@@ -1,4 +1,4 @@
-<template>
+<template v-on:scroll="scrollFunction">
     <div>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4" id="mainNav">
@@ -25,7 +25,7 @@
             </div>
             </div>
         </nav>
-            <router-view></router-view>
+        <router-view></router-view>
         <!-- Footer -->
         <!-- Contact Section -->
         <section class="bg-dark page-section py-5">
@@ -33,10 +33,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
                 <h5 class="mt-0 pb-4 text-light text-uppercase">Stay Connected</h5>
-                <a href='https://www.instagram.com/bereznii_/'><img class='contact-icon' src=""></a>
-                <a href='https://www.facebook.com/profile.php?id=100008971929484'><img class='contact-icon' src=""></a>
-                <a href='https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%B1%D0%B5%D1%80%D0%B5%D0%B7%D0%BD%D0%B8%D0%B9-75173b177/'><img class='contact-icon' src=""></a>
-                <a href="#contact"><img class='contact-icon' src=""></a>
+                <a href='https://www.instagram.com/bereznii_/'><img class='contact-icon' src="/img/instagram.svg"></a>
+                <a href='https://www.facebook.com/profile.php?id=100008971929484'><img class='contact-icon' src="/img/facebook.svg"></a>
+                <a href='https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%B1%D0%B5%D1%80%D0%B5%D0%B7%D0%BD%D0%B8%D0%B9-75173b177/'><img class='contact-icon' src="/img/linkedin.svg"></a>
+                <router-link class='text-light' :to="{ name: 'contact' }"><img class='contact-icon' src="/img/mail.svg"></router-link>
                 </div>
             </div>
             </div>
@@ -45,11 +45,11 @@
         <footer class="bg-black py-4">
             <div class="container">
             <div class="row justify-content-center">
-                <div class="col col-md"><a class='text-light' href="#mywork">My Work</a></div>
+                <div class="col col-md"><router-link class='text-light' :to="{ name: 'mywork' }">My Work</router-link></div>
                 <div class="col col-md text-light">|</div>
-                <div class="col col-md"><a class='text-light' href="#software">Software</a></div>
+                <div class="col col-md"><router-link class='text-light' :to="{ name: 'software' }">Software</router-link></div>
                 <div class="col col-md text-light">|</div>
-                <div class="col col-md"><a class='text-light' href="#contact">Contact</a></div>
+                <div class="col col-md"><router-link class='text-light' :to="{ name: 'contact' }">Contact</router-link></div>
             </div>
             <!--<div class="small text-center text-muted">Copyright &copy; {{date("Y")}} - Dmytro Bereznii</div>-->
             </div>
@@ -57,5 +57,27 @@
     </div>
 </template>
 <script>
-    export default {}
+    export default {
+        methods: {
+            handleScroll (event) {
+                let header = document.querySelector("#mainNav");
+                if (window.scrollY > 100 && !header.className.includes('v-toolbar--bgchange')) {
+                header.classList.add('navbar-scrolled'); 
+                header.classList.remove('py-4');
+                header.classList.add('py-2');
+                } else if (window.scrollY < 100) {
+                header.classList.remove('navbar-scrolled');
+                header.classList.remove('py-2');
+                header.classList.add('py-4');
+                }
+            }
+        
+        },
+        created () {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        destroyed () {
+            window.removeEventListener('scroll', this.handleScroll);
+        }
+    }
 </script>

@@ -18,7 +18,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="{{asset('css/creative.min.css')}}" rel="stylesheet">

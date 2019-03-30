@@ -1,10 +1,10 @@
 .navbar-brand { 
   color: #191919 !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
 .nav-link { 
   color: #191919 !important; 
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 } 
 
 .navbar-brand:hover, .nav-link:hover { 
@@ -12,10 +12,10 @@
 } 
 
 .navbar-scrolled .navbar-brand {
-  font-weight: 100 !important;
+  font-weight: 400 !important;
 } 
 .navbar-scrolled .nav-link {
-  font-weight: 100 !important;
+  font-weight: 400 !important;
 } 
 
 .stack-text .p-subheading {
