@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id="software">
   <!-- Alternative CSS -->
   <link href="/css/software.css" rel="stylesheet">
 
@@ -20,7 +20,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr></tr>
+            <tr v-for="project in projects">
+              <td>{{project.name}}</td>
+              <td>{{project.description}}</td>
+              <td>{{project.language}}</td>
+              <td>{{project.created}}</td>
+              <td>{{project.updated}}</td>
+              <td>{{project.size}}</td>
+              <td>{{project.commits}}</td>
+            </tr>
           </tbody>
         </table>
     </div>
@@ -75,9 +83,14 @@
           <ul>
             <li>Laravel ...</li>
           </ul>
-        </div>  
+        </div> 
       </div>
     </div>
   </section>
   </div>
 </template>
+<script>
+    export default {
+        props:['projects']
+    }
+</script>

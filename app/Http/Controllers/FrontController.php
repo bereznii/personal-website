@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SpaController extends Controller
+class FrontController extends Controller
 {
     public function index()
     {

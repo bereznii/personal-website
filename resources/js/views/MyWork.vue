@@ -1,7 +1,7 @@
 <template>
-<div>
-<!-- Masthead -->
-<header class="masthead">
+<div id="mywork-view">
+  <!-- Masthead -->
+  <header class="masthead">
     <div class="container h-100">
       <div class="row h-100 justify-content-center align-items-center">
         <div class="col-lg-8 align-self-end">
@@ -38,6 +38,12 @@
             </tr>
           </thead>
           <tbody>
+            <tr v-for="project in projects">
+              <td>{{project.name}}</td>
+              <td>{{project.description}}</td>
+              <td>{{project.language}}</td>
+              <td>{{project.updated}}</td>
+            </tr>
           </tbody>
         </table>
     </div>
@@ -61,3 +67,8 @@
   </section>
 </div>
 </template>
+<script>
+    export default {
+      props:['projects']
+    }
+</script>

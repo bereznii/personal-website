@@ -12,13 +12,9 @@
 */
 
 //FRONT-VUE
-Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+Route::get('/{any}', 'FrontController@index')->where('any', '.*');
 
-//FRONT-END pages
-Route::get('/', 'FrontEndController@mywork')->name('mywork');
-Route::get('/software', 'FrontEndController@software')->name('software');
-Route::get('/contact', 'FrontEndController@contact')->name('contact');
-Route::post('/send_email', 'FrontEndController@sendEmail')->name('send_email');
+Route::post('/projects', 'BackController@getProjects');
 
 Auth::routes();
 

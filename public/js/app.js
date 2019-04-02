@@ -1754,6 +1754,90 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/MyWork.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/MyWork.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['projects']
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Navigation.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Navigation.vue?vue&type=script&lang=js& ***!
@@ -1822,6 +1906,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      projects: null
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.post('/projects').then(function (response) {
+      return _this.projects = response.data;
+    });
+  },
   methods: {
     handleScroll: function handleScroll(event) {
       var header = document.querySelector("#mainNav");
@@ -1843,6 +1939,112 @@ __webpack_require__.r(__webpack_exports__);
   destroyed: function destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Software.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Software.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['projects']
 });
 
 /***/ }),
@@ -37025,118 +37227,146 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { attrs: { id: "mywork-view" } }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c("section", { staticClass: "page-section" }, [
+      _c("div", { staticClass: "container py-4" }, [
+        _c("h5", { staticClass: "h5spacing" }, [
+          _vm._v("Last Projects (from GitHub)")
+        ]),
+        _vm._v(" "),
+        _c("table", { staticClass: "table table-hover" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.projects, function(project) {
+              return _c("tr", [
+                _c("td", [_vm._v(_vm._s(project.name))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(project.description))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(project.language))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(project.updated))])
+              ])
+            }),
+            0
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(3)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("header", { staticClass: "masthead" }, [
-        _c("div", { staticClass: "container h-100" }, [
-          _c(
-            "div",
-            {
-              staticClass: "row h-100 justify-content-center align-items-center"
-            },
-            [
-              _c("div", { staticClass: "col-lg-8 align-self-end" }, [
-                _c("h1", { staticClass: "text-uppercase text-white" }, [
-                  _vm._v("Dmytro Bereznii")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-8 align-self-baseline" }, [
-                _c(
-                  "h4",
-                  { staticClass: "text-white-75 font-weight-light mb-5" },
-                  [
-                    _vm._v(
-                      "Self-learning software engineering and architecture through research & development."
-                    )
-                  ]
-                )
+    return _c("header", { staticClass: "masthead" }, [
+      _c("div", { staticClass: "container h-100" }, [
+        _c(
+          "div",
+          {
+            staticClass: "row h-100 justify-content-center align-items-center"
+          },
+          [
+            _c("div", { staticClass: "col-lg-8 align-self-end" }, [
+              _c("h1", { staticClass: "text-uppercase text-white" }, [
+                _vm._v("Dmytro Bereznii")
               ])
-            ]
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-8 align-self-baseline" }, [
+              _c(
+                "h4",
+                { staticClass: "text-white-75 font-weight-light mb-5" },
+                [
+                  _vm._v(
+                    "Self-learning software engineering and architecture through research & development."
+                  )
+                ]
+              )
+            ])
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "page-section bg-black" }, [
+      _c("div", { staticClass: "container py-5" }, [
+        _c("h2", { staticClass: "text-uppercase pb-5" }, [_vm._v("My Work")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-light" }, [
+          _vm._v(
+            "I am a computer systems and network course student, who is interested in designing and developing computer networks and web-development overall. \n      Not the best student and not one of those who learn everything by heart, to pretend they understand it. \n      But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into practice."
           )
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Title")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Language")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Updated")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container py-4" }, [
+      _c("h5", { staticClass: "h5spacing" }, [
+        _vm._v("Future Ventures (teach myself in 2019)")
       ]),
       _vm._v(" "),
-      _c("section", { staticClass: "page-section bg-black" }, [
-        _c("div", { staticClass: "container py-5" }, [
-          _c("h2", { staticClass: "text-uppercase pb-5" }, [_vm._v("My Work")]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-light" }, [
-            _vm._v(
-              "I am a computer systems and network course student, who is interested in designing and developing computer networks and web-development overall. \n      Not the best student and not one of those who learn everything by heart, to pretend they understand it. \n      But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into practice."
-            )
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "page-section" }, [
-        _c("div", { staticClass: "container py-4" }, [
-          _c("h5", { staticClass: "h5spacing" }, [
-            _vm._v("Last Projects (from GitHub)")
-          ]),
-          _vm._v(" "),
-          _c("table", { staticClass: "table table-hover" }, [
-            _c("thead", [
-              _c("tr", [
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Title")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Language")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Updated")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tbody")
-          ])
+      _c("ul", [
+        _c("li", [
+          _vm._v(
+            "Scalable distributed systems (infrastructure, networks, microservices)"
+          )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "container py-4" }, [
-          _c("h5", { staticClass: "h5spacing" }, [
-            _vm._v("Future Ventures (teach myself in 2019)")
-          ]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _vm._v(
-                "Scalable distributed systems (infrastructure, networks, microservices)"
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Practise more with vanilla PHP")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("MySQL for complex queries")]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("Any NoSQL, such as MongoDB, Memcached or Redis")
-            ]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Security")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Testing")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("More practice in JavaScript, NodeJS?")]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("General purpose language, such as Python or C#")
-            ]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Blockchain")])
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "This list built from interests in my head right now, so it may vary over time. You can read more about my technology stack on the software page."
-            )
-          ])
-        ])
+        _c("li", [_vm._v("Practise more with vanilla PHP")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("MySQL for complex queries")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Any NoSQL, such as MongoDB, Memcached or Redis")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Security")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Testing")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("More practice in JavaScript, NodeJS?")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("General purpose language, such as Python or C#")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Blockchain")])
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "This list built from interests in my head right now, so it may vary over time. You can read more about my technology stack on the software page."
+        )
       ])
     ])
   }
@@ -37164,6 +37394,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { attrs: { id: "base-view" } },
     [
       _c(
         "nav",
@@ -37243,7 +37474,7 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c("router-view"),
+      _c("router-view", { attrs: { projects: _vm.projects } }),
       _vm._v(" "),
       _c("section", { staticClass: "bg-dark page-section py-5" }, [
         _c("div", { staticClass: "container" }, [
@@ -37442,130 +37673,150 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { attrs: { id: "software" } }, [
+    _c("link", { attrs: { href: "/css/software.css", rel: "stylesheet" } }),
+    _vm._v(" "),
+    _c("section", { staticClass: "page-section project-repositories" }, [
+      _c("div", { staticClass: "container py-4" }, [
+        _c("h2", { staticClass: "h5spacing" }, [_vm._v("Projects Repository")]),
+        _vm._v(" "),
+        _c("table", { staticClass: "table" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.projects, function(project) {
+              return _c("tr", [
+                _c("td", [_vm._v(_vm._s(project.name))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(project.description))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(project.language))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(project.created))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(project.updated))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(project.size))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(project.commits))])
+              ])
+            }),
+            0
+          )
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(1)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("link", { attrs: { href: "/css/software.css", rel: "stylesheet" } }),
-      _vm._v(" "),
-      _c("section", { staticClass: "page-section project-repositories" }, [
-        _c("div", { staticClass: "container py-4" }, [
-          _c("h2", { staticClass: "h5spacing" }, [
-            _vm._v("Projects Repository")
-          ]),
-          _vm._v(" "),
-          _c("table", { staticClass: "table" }, [
-            _c("thead", [
-              _c("tr", [
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Title")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Language")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Created")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Updated")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Size (kb)")]),
-                _vm._v(" "),
-                _c("th", { attrs: { scope: "col" } }, [_vm._v("Commits")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tbody", [_c("tr")])
-          ])
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Title")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Language")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Created")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Updated")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Size (kb)")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Commits")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "page-section bg-black" }, [
+      _c("div", { staticClass: "container py-5" }, [
+        _c("h2", { staticClass: "text-uppercase" }, [_vm._v("This Platform")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-uppercase pb-1 stack-text" }, [
+          _vm._v("Idea behind it")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-light" }, [
+          _vm._v(
+            "\n      The main problem, which led to creation of this 'platform' was lack of real-life experience of creation and deploying web-applications. bereznii.me allows me to practice in different technologies on full cycle of project's lifespan: form designing to deploying."
+          ),
+          _c("br"),
+          _vm._v(
+            "\n      It is built mainly using PHP based on Laravel Framework and JS on Vue.js."
+          ),
+          _c("br"),
+          _vm._v(
+            "\n      This front-end pages are just a cover for everything going on in the background. ...\n      "
+          )
         ])
       ]),
       _vm._v(" "),
-      _c("section", { staticClass: "page-section bg-black" }, [
-        _c("div", { staticClass: "container py-5" }, [
-          _c("h2", { staticClass: "text-uppercase" }, [
-            _vm._v("This Platform")
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-uppercase pb-1 stack-text" }, [
-            _vm._v("Idea behind it")
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-light" }, [
-            _vm._v(
-              "\n      The main problem, which led to creation of this 'platform' was lack of real-life experience of creation and deploying web-applications. bereznii.me allows me to practice in different technologies on full cycle of project's lifespan: form designing to deploying."
-            ),
-            _c("br"),
-            _vm._v(
-              "\n      It is built mainly using PHP based on Laravel Framework and JS on Vue.js."
-            ),
-            _c("br"),
-            _vm._v(
-              "\n      This front-end pages are just a cover for everything going on in the background. ...\n      "
-            )
-          ])
+      _c("div", { staticClass: "container py-5" }, [
+        _c("h2", { staticClass: "text-uppercase" }, [
+          _vm._v("Technology stack")
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "container py-5" }, [
-          _c("h2", { staticClass: "text-uppercase" }, [
-            _vm._v("Technology stack")
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-uppercase pb-3 stack-text" }, [
-            _vm._v("My Website Architecture")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row stack-text" }, [
-            _c("div", { staticClass: "col" }, [
-              _c("h5", {}, [_vm._v("Front-end")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "p-subheading" }, [
-                _vm._v("HTML, CSS, JS")
-              ]),
-              _vm._v(" "),
-              _c("ul", [
-                _c("li", [_vm._v("HTML5")]),
-                _vm._v(" "),
-                _c("li", [_vm._v("CSS3")]),
-                _vm._v(" "),
-                _c("li", [_vm._v("Bootstrap4")]),
-                _vm._v(" "),
-                _c("li", [_vm._v("JQuery")]),
-                _vm._v(" "),
-                _c("li", [_vm._v("Laravel Blade")])
-              ])
-            ]),
+        _c("p", { staticClass: "text-uppercase pb-3 stack-text" }, [
+          _vm._v("My Website Architecture")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row stack-text" }, [
+          _c("div", { staticClass: "col" }, [
+            _c("h5", {}, [_vm._v("Front-end")]),
             _vm._v(" "),
-            _c("div", { staticClass: "col" }, [
-              _c("h5", { staticClass: "p-heading" }, [_vm._v("Back-end")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "p-subheading" }, [_vm._v("PHP")]),
-              _vm._v(" "),
-              _c("ul", [_c("li", [_vm._v("Laravel app")])])
-            ]),
+            _c("p", { staticClass: "p-subheading" }, [_vm._v("HTML, CSS, JS")]),
             _vm._v(" "),
-            _c("div", { staticClass: "col" }, [
-              _c("h5", [_vm._v("Database")]),
+            _c("ul", [
+              _c("li", [_vm._v("HTML5")]),
               _vm._v(" "),
-              _c("p", { staticClass: "p-subheading" }, [_vm._v("MySQL")])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col" }, [
-              _c("h5", [_vm._v("Deployment")]),
+              _c("li", [_vm._v("CSS3")]),
               _vm._v(" "),
-              _c("p", { staticClass: "p-subheading" }),
+              _c("li", [_vm._v("Bootstrap4")]),
               _vm._v(" "),
-              _c("ul", [_c("li", [_vm._v("...")])])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col" }, [
-              _c("h5", [_vm._v("Security")]),
+              _c("li", [_vm._v("JQuery")]),
               _vm._v(" "),
-              _c("p", { staticClass: "p-subheading" }),
-              _vm._v(" "),
-              _c("ul", [_c("li", [_vm._v("Laravel ...")])])
+              _c("li", [_vm._v("Laravel Blade")])
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("h5", { staticClass: "p-heading" }, [_vm._v("Back-end")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "p-subheading" }, [_vm._v("PHP")]),
+            _vm._v(" "),
+            _c("ul", [_c("li", [_vm._v("Laravel app")])])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("h5", [_vm._v("Database")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "p-subheading" }, [_vm._v("MySQL")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("h5", [_vm._v("Deployment")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "p-subheading" }),
+            _vm._v(" "),
+            _c("ul", [_c("li", [_vm._v("...")])])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("h5", [_vm._v("Security")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "p-subheading" }),
+            _vm._v(" "),
+            _c("ul", [_c("li", [_vm._v("Laravel ...")])])
           ])
         ])
       ])
@@ -52374,12 +52625,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
   routes: [{
     path: '/',
-    children: [{
-      path: '/',
-      component: _views_MyWork__WEBPACK_IMPORTED_MODULE_5__["default"]
-    }],
-    name: 'navigation',
-    component: _views_Navigation__WEBPACK_IMPORTED_MODULE_2__["default"]
+    name: 'mywork',
+    component: _views_MyWork__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
     path: '/software',
     name: 'software',
@@ -52388,10 +52635,6 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     path: '/contact',
     name: 'contact',
     component: _views_Contact__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }, {
-    path: '/mywork',
-    name: 'mywork',
-    component: _views_MyWork__WEBPACK_IMPORTED_MODULE_5__["default"]
   }],
   scrollBehavior: function scrollBehavior(to, from, savedPosition) {
     return {
@@ -52531,15 +52774,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MyWork_vue_vue_type_template_id_57eed388___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MyWork.vue?vue&type=template&id=57eed388& */ "./resources/js/views/MyWork.vue?vue&type=template&id=57eed388&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _MyWork_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyWork.vue?vue&type=script&lang=js& */ "./resources/js/views/MyWork.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MyWork_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _MyWork_vue_vue_type_template_id_57eed388___WEBPACK_IMPORTED_MODULE_0__["render"],
   _MyWork_vue_vue_type_template_id_57eed388___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -52553,6 +52798,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/views/MyWork.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/MyWork.vue?vue&type=script&lang=js&":
+/*!****************************************************************!*\
+  !*** ./resources/js/views/MyWork.vue?vue&type=script&lang=js& ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MyWork_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./MyWork.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/MyWork.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MyWork_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -52647,21 +52906,24 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************!*\
   !*** ./resources/js/views/Software.vue ***!
   \*****************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Software_vue_vue_type_template_id_1f078b74___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Software.vue?vue&type=template&id=1f078b74& */ "./resources/js/views/Software.vue?vue&type=template&id=1f078b74&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Software_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Software.vue?vue&type=script&lang=js& */ "./resources/js/views/Software.vue?vue&type=script&lang=js&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Software_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Software_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Software_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Software_vue_vue_type_template_id_1f078b74___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Software_vue_vue_type_template_id_1f078b74___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -52675,6 +52937,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/views/Software.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/Software.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./resources/js/views/Software.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Software_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Software.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Software.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Software_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

@@ -14,12 +14,10 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/',
-            children: [
-                { path: '/', component: MyWork },
-            ],
-            name: 'navigation',
-            component: Navigation
+            path: '/', 
+            name: 'mywork', 
+            component: MyWork,  
+            
         },
         {
             path: '/software',
@@ -30,11 +28,6 @@ const router = new VueRouter({
             path: '/contact',
             name: 'contact',
             component: Contact,
-        },
-        {
-            path: '/mywork',
-            name: 'mywork',
-            component: MyWork,
         },
     ],
     scrollBehavior (to, from, savedPosition) {

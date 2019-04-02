@@ -1,5 +1,5 @@
 <template v-on:scroll="scrollFunction">
-    <div>
+    <div id="base-view">
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4" id="mainNav">
             <div class="container">
@@ -25,7 +25,7 @@
             </div>
             </div>
         </nav>
-        <router-view></router-view>
+        <router-view v-bind:projects="projects"></router-view>
         <!-- Footer -->
         <!-- Contact Section -->
         <section class="bg-dark page-section py-5">
@@ -58,6 +58,16 @@
 </template>
 <script>
     export default {
+        data() {
+          return {
+              projects: null,
+          };
+        },
+        mounted () {
+          axios
+            .post('/projects')
+            .then(response => (this.projects = response.data))
+        },
         methods: {
             handleScroll (event) {
                 let header = document.querySelector("#mainNav");
