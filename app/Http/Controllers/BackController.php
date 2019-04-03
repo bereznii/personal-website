@@ -20,11 +20,4 @@ class BackController extends Controller
         return redirect()->route('contact');
     }
 
-    public function getProjects()
-    {
-        $projects = Project::get();
-
-        return json_encode($projects);
-    }
-
 }

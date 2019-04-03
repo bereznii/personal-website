@@ -10798,3 +10798,7 @@ p.text-light {
 .navbar-scrolled .nav-link {
   font-weight: 400 !important;
 } 
+
+a.router-link-exact-active {
+  color: #f4623a !important;
+}

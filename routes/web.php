@@ -12,9 +12,7 @@
 */
 
 //FRONT-VUE
-Route::get('/{any}', 'FrontController@index')->where('any', '.*');
-
-Route::post('/projects', 'BackController@getProjects');
+Route::get('/{uri}', 'FrontController@index')->where('uri', '(|software|contact)');
 
 Auth::routes();
 

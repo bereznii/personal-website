@@ -65,7 +65,7 @@
         },
         mounted () {
           axios
-            .post('/projects')
+            .get('api/projects')
             .then(response => (this.projects = response.data))
         },
         methods: {
