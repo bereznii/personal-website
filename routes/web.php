@@ -13,6 +13,7 @@
 
 //FRONT-VUE
 Route::get('/{uri}', 'FrontController@index')->where('uri', '(|software|contact)');
+Route::post('/send_email', 'BackController@sendEmail');
 
 Auth::routes();
 

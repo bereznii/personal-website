@@ -15,9 +15,18 @@ class BackController extends Controller
      */
     public function sendEmail(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'subject' => 'required|alpha_num|max:255',
+            'reason' => 'required|alpha_num|max:255',
+            'email' => 'required|email|max:255',
+            'message' => 'required|max:65000',
+        ]);
+        
         SendEmailJob::dispatch($request->all())->delay(now()->addSeconds(5));
 
-        return redirect()->route('contact');
+        return response()->json(null, 200);
+        
     }
 
 }
