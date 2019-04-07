@@ -1990,9 +1990,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2011,11 +2008,13 @@ __webpack_require__.r(__webpack_exports__);
       var header = document.querySelector("#mainNav");
 
       if (window.scrollY > 100 && !header.className.includes('v-toolbar--bgchange')) {
+        header.classList.remove('navbar-notscrolled');
         header.classList.add('navbar-scrolled');
         header.classList.remove('py-4');
         header.classList.add('py-2');
       } else if (window.scrollY < 100) {
         header.classList.remove('navbar-scrolled');
+        header.classList.add('navbar-notscrolled');
         header.classList.remove('py-2');
         header.classList.add('py-4');
       }
@@ -2040,7 +2039,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -37197,11 +37195,9 @@ var render = function() {
                 }
               },
               [
-                _c("h4", { staticClass: "mt-0 text-center" }, [
-                  _vm._v("Send me an email")
-                ]),
+                _c("h4", { staticClass: "mt-0" }, [_vm._v("Send me an email")]),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "NameInput" } }, [_vm._v("Name")]),
+                _c("label", { attrs: { for: "NameInput" } }, [_vm._v("Name:")]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -37351,7 +37347,9 @@ var render = function() {
                     }
                   },
                   [
-                    _c("option", [_vm._v("Just to say HI")]),
+                    _c("option", { attrs: { selected: "" } }, [
+                      _vm._v("Just to say HI")
+                    ]),
                     _vm._v(" "),
                     _c("option", [_vm._v("Business")]),
                     _vm._v(" "),
@@ -37466,7 +37464,7 @@ var render = function() {
           _vm._v("Last Projects (from GitHub)")
         ]),
         _vm._v(" "),
-        _c("table", { staticClass: "table table-hover" }, [
+        _c("table", { staticClass: "table table-hover table-responsive-md" }, [
           _vm._m(2),
           _vm._v(" "),
           _c(
@@ -37506,7 +37504,9 @@ var staticRenderFns = [
           [
             _c("div", { staticClass: "col-lg-8 align-self-end" }, [
               _c("h1", { staticClass: "text-uppercase text-white" }, [
-                _vm._v("Dmytro Bereznii")
+                _vm._v("Dmytro"),
+                _c("br"),
+                _vm._v(" Bereznii")
               ])
             ]),
             _vm._v(" "),
@@ -37538,6 +37538,12 @@ var staticRenderFns = [
           _vm._v(
             "I am a computer systems and network course student, who is interested in designing and developing computer networks and web-development overall. \n      Not the best student and not one of those who learn everything by heart, to pretend they understand it. \n      But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into practice."
           )
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-light" }, [
+          _vm._v(
+            "Want to build scalable and distributed architectures and work with processes automatization."
+          )
         ])
       ])
     ])
@@ -37564,7 +37570,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container py-4" }, [
       _c("h5", { staticClass: "h5spacing" }, [
-        _vm._v("Future Ventures (teach myself in 2019)")
+        _vm._v("Future Ventures (interested in 2019)")
       ]),
       _vm._v(" "),
       _c("ul", [
@@ -37574,8 +37580,6 @@ var staticRenderFns = [
           )
         ]),
         _vm._v(" "),
-        _c("li", [_vm._v("Practise more with vanilla PHP")]),
-        _vm._v(" "),
         _c("li", [_vm._v("MySQL for complex queries")]),
         _vm._v(" "),
         _c("li", [_vm._v("Any NoSQL, such as MongoDB, Memcached or Redis")]),
@@ -37584,7 +37588,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("li", [_vm._v("Testing")]),
         _vm._v(" "),
-        _c("li", [_vm._v("More practice in JavaScript, NodeJS?")]),
+        _c("li", [_vm._v("More practice with JavaScript, NodeJS?")]),
         _vm._v(" "),
         _c("li", [_vm._v("General purpose language, such as Python or C#")]),
         _vm._v(" "),
@@ -37627,7 +37631,8 @@ var render = function() {
       _c(
         "nav",
         {
-          staticClass: "navbar navbar-expand-lg navbar-light fixed-top py-4",
+          staticClass:
+            "navbar navbar-expand-lg navbar-light fixed-top py-4 navbar-notscrolled",
           attrs: { id: "mainNav" }
         },
         [
@@ -37643,7 +37648,7 @@ var render = function() {
             _c(
               "div",
               {
-                staticClass: "collapse navbar-collapse shift",
+                staticClass: "collapse navbar-collapse",
                 attrs: { id: "navbarResponsive" }
               },
               [
@@ -37762,7 +37767,9 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "col col-md text-light" }, [_vm._v("|")]),
+            _c("div", { staticClass: "delimiter col col-md text-light" }, [
+              _vm._v("|")
+            ]),
             _vm._v(" "),
             _c(
               "div",
@@ -37780,7 +37787,9 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "col col-md text-light" }, [_vm._v("|")]),
+            _c("div", { staticClass: "delimiter col col-md text-light" }, [
+              _vm._v("|")
+            ]),
             _vm._v(" "),
             _c(
               "div",
@@ -37812,7 +37821,7 @@ var staticRenderFns = [
     return _c(
       "button",
       {
-        staticClass: "navbar-toggler navbar-toggler-right",
+        staticClass: "navbar-toggler navbar-toggler-right collapsed",
         attrs: {
           type: "button",
           "data-toggle": "collapse",
@@ -37908,7 +37917,7 @@ var render = function() {
       _c("div", { staticClass: "container py-4" }, [
         _c("h2", { staticClass: "h5spacing" }, [_vm._v("Projects Repository")]),
         _vm._v(" "),
-        _c("table", { staticClass: "table" }, [
+        _c("table", { staticClass: "table table-hover table-responsive-md" }, [
           _vm._m(0),
           _vm._v(" "),
           _c(
@@ -37982,10 +37991,7 @@ var staticRenderFns = [
           _vm._v(
             "\n      It is built mainly using PHP based on Laravel Framework and JS on Vue.js."
           ),
-          _c("br"),
-          _vm._v(
-            "\n      This front-end pages are just a cover for everything going on in the background. ...\n      "
-          )
+          _c("br")
         ])
       ]),
       _vm._v(" "),
@@ -37999,52 +38005,64 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row stack-text" }, [
-          _c("div", { staticClass: "col" }, [
-            _c("h5", {}, [_vm._v("Front-end")]),
+          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
+            _c("h5", { staticClass: "p-heading" }, [_vm._v("Front-end")]),
             _vm._v(" "),
             _c("p", { staticClass: "p-subheading" }, [_vm._v("HTML, CSS, JS")]),
             _vm._v(" "),
             _c("ul", [
-              _c("li", [_vm._v("HTML5")]),
+              _c("li", [
+                _vm._v(
+                  "Single page web-application built with Vue.js and Vue Router"
+                )
+              ]),
               _vm._v(" "),
-              _c("li", [_vm._v("CSS3")]),
-              _vm._v(" "),
-              _c("li", [_vm._v("Bootstrap4")]),
-              _vm._v(" "),
-              _c("li", [_vm._v("JQuery")]),
-              _vm._v(" "),
-              _c("li", [_vm._v("Laravel Blade")])
+              _c("li", [
+                _vm._v(
+                  "Multi-page, server rendered web-application built with Laravel and Laravel Blade"
+                )
+              ])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
+          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
             _c("h5", { staticClass: "p-heading" }, [_vm._v("Back-end")]),
             _vm._v(" "),
             _c("p", { staticClass: "p-subheading" }, [_vm._v("PHP")]),
             _vm._v(" "),
-            _c("ul", [_c("li", [_vm._v("Laravel app")])])
+            _c("ul", [_c("li", [_vm._v("Laravel Application")])])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
+          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
+            _c("h5", [_vm._v("Security")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "p-subheading" }, [_vm._v("Laravel")]),
+            _vm._v(" "),
+            _c("ul", [
+              _c("li", [_vm._v("Basic Laravel Authentication for me")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Laravel Validation")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
             _c("h5", [_vm._v("Database")]),
             _vm._v(" "),
-            _c("p", { staticClass: "p-subheading" }, [_vm._v("MySQL")])
+            _c("p", { staticClass: "p-subheading" }, [_vm._v("MySQL")]),
+            _vm._v(" "),
+            _c("ul", [
+              _c("li", [_vm._v("All saved data")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Laravel Queues")])
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
+          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
             _c("h5", [_vm._v("Deployment")]),
             _vm._v(" "),
             _c("p", { staticClass: "p-subheading" }),
             _vm._v(" "),
             _c("ul", [_c("li", [_vm._v("...")])])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
-            _c("h5", [_vm._v("Security")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "p-subheading" }),
-            _vm._v(" "),
-            _c("ul", [_c("li", [_vm._v("Laravel ...")])])
           ])
         ])
       ])

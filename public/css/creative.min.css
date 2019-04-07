@@ -10,6 +10,28 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+/*Gravity Regular Font*/
+@font-face {
+  font-family: "Gravity-Bold";
+  src: url('/fonts/Gravity-Bold.otf');
+}
+
+@font-face {
+  font-family: "Gravity-Regular";
+  src: url('/fonts/Gravity-Regular.otf');
+}
+
+@font-face {
+  font-family: "Gravity-Light";
+  src: url('/fonts/Gravity-Light.otf');
+}
+
+@font-face {
+  font-family: "Gravity-Book";
+  src: url('/fonts/Gravity-Book.otf');
+}
+
  :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -61,7 +83,7 @@
   
   body {
     margin: 0;
-    font-family:'Roboto', sans-serif;/* "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family:'Gravity-Regular', sans-serif;/* "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     */font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -371,7 +393,7 @@
   h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0.5rem;
-    font-family:'Roboto', sans-serif;/* "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family:'Gravity-Regular', sans-serif;/* "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     */font-weight: 500;
     line-height: 1.2;
   }
@@ -3329,6 +3351,12 @@
     .dropdown-menu-md-right {
       right: 0;
       left: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .delimiter {
+      display: none;
     }
   }
   
@@ -10601,14 +10629,14 @@
   }
   
   #mainNav .navbar-brand {
-    font-family: 'Roboto', sans-serif;/*"Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Gravity-Bold', sans-serif;/*"Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     */font-weight: 500;
     color: #212529;
   }
   
   #mainNav .navbar-nav .nav-item .nav-link {
     color: #6c757d;
-    font-family: 'Roboto', sans-serif;/* "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Gravity-Regular', sans-serif;/* "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     */font-weight: 500;
     font-size: 1rem;
     padding: 0.75rem 0;
@@ -10649,7 +10677,23 @@
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);  
       background-color: #fff;
       opacity: 0.9;
+      animation: smoothScroll 0.5s forwards;
     }
+
+  #mainNav.navbar-scrolled {
+    padding-top: 1.5rem !important;
+  }
+
+    @keyframes smoothScroll {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        
+        transform: translateY(-17px);
+      }
+    }
+
     #mainNav.navbar-scrolled .navbar-brand {
       color: #212529;
     }
@@ -10677,7 +10721,7 @@
   
   header.masthead h1 {
     font-size: 2.25rem;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.3em;
   }
   
   @media (min-width: 992px) {
@@ -10754,7 +10798,7 @@
 
 /*CUSTOM*/
 header h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Gravity-Regular', sans-serif;
 }
 
 div.col.col-md {
@@ -10802,3 +10846,19 @@ p.text-light {
 a.router-link-exact-active {
   color: #f4623a !important;
 }
+
+
+#mainNav.navbar-notscrolled {
+  padding-top: 1.5rem !important;
+  animation: smoothUnscroll 0.5s forwards;
+}
+
+  @keyframes smoothUnscroll {
+    0% {
+      transform: translateY(-17px);
+    }
+    100% {
+      
+      transform: translateY(0px);
+    }
+  }

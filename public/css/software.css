@@ -19,10 +19,12 @@
 } 
 
 .stack-text .p-subheading {
+  font-weight: 400 !important;
   font-size: 0.9rem;
 }
 .stack-text ul {
-  font-size: 0.8rem;
+  font-weight: 400 !important;
+  font-size: 0.9rem;
 }
 
 .stack-text ul {

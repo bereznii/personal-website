@@ -1,28 +1,25 @@
 <template v-on:scroll="scrollFunction">
     <div id="base-view">
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4 navbar-notscrolled" id="mainNav">
             <div class="container">
-            <a class="navbar-brand" href="#page-top">Dmytro Bereznii</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse shift" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                <li class="nav-item text-center">
-                    <!--<a class="nav-link" href="{{route('mywork')}}">My Work</a>-->
-                    <router-link class="nav-link" :to="{ name: 'mywork' }">My Work</router-link>
-                </li>
-                <li class="nav-item text-center">
-                    <!--<a class="nav-link" href="{{route('software')}}">Software</a>-->
-                    <router-link class="nav-link" :to="{ name: 'software' }">Software</router-link>
-                </li>
-                <li class="nav-item">
-                    <!--<a class="nav-link text-center" href="{{route('contact')}}">Contact</a>-->
-                    <router-link class="nav-link text-center" :to="{ name: 'contact' }">Contact</router-link>
-                </li>
-                </ul>
-            </div>
+                <a class="navbar-brand" href="#page-top">Dmytro Bereznii</a>
+                <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item text-center">
+                            <router-link class="nav-link" :to="{ name: 'mywork' }">My Work</router-link>
+                        </li>
+                        <li class="nav-item text-center">
+                            <router-link class="nav-link" :to="{ name: 'software' }">Software</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link text-center" :to="{ name: 'contact' }">Contact</router-link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <router-view v-bind:projects="projects"></router-view>
@@ -46,9 +43,9 @@
             <div class="container">
             <div class="row justify-content-center">
                 <div class="col col-md"><router-link class='text-light' :to="{ name: 'mywork' }">My Work</router-link></div>
-                <div class="col col-md text-light">|</div>
+                <div class="delimiter col col-md text-light">|</div>
                 <div class="col col-md"><router-link class='text-light' :to="{ name: 'software' }">Software</router-link></div>
-                <div class="col col-md text-light">|</div>
+                <div class="delimiter col col-md text-light">|</div>
                 <div class="col col-md"><router-link class='text-light' :to="{ name: 'contact' }">Contact</router-link></div>
             </div>
             <!--<div class="small text-center text-muted">Copyright &copy; {{date("Y")}} - Dmytro Bereznii</div>-->
@@ -72,16 +69,17 @@
             handleScroll (event) {
                 let header = document.querySelector("#mainNav");
                 if (window.scrollY > 100 && !header.className.includes('v-toolbar--bgchange')) {
-                header.classList.add('navbar-scrolled'); 
-                header.classList.remove('py-4');
-                header.classList.add('py-2');
+                    header.classList.remove('navbar-notscrolled');
+                    header.classList.add('navbar-scrolled'); 
+                    header.classList.remove('py-4');
+                    header.classList.add('py-2');
                 } else if (window.scrollY < 100) {
-                header.classList.remove('navbar-scrolled');
-                header.classList.remove('py-2');
-                header.classList.add('py-4');
+                    header.classList.remove('navbar-scrolled');
+                    header.classList.add('navbar-notscrolled');
+                    header.classList.remove('py-2');
+                    header.classList.add('py-4');
                 }
             }
-        
         },
         created () {
             window.addEventListener('scroll', this.handleScroll);

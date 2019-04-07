@@ -6,8 +6,8 @@
         <div class="row justify-content-center">
           <div class="col-md-7">
             <form @submit.prevent="sendEmail">
-              <h4 class="mt-0 text-center">Send me an email</h4>
-              <label for="NameInput">Name</label>
+              <h4 class="mt-0">Send me an email</h4>
+              <label for="NameInput">Name:</label>
               <input type="text" name='name' id="NameInput" class="form-control" placeholder="Your name" v-model="fields.name" required>
               <div v-if="errors && errors.name" class="text-danger">{{ errors.name[0] }}</div>
               <label for="EmailInput">Email</label>
@@ -18,7 +18,7 @@
               <div v-if="errors && errors.subject" class="text-danger">{{ errors.subject[0] }}</div>
               <label for="ReasonInput">Reason</label>
               <select class="form-control" name='reason' id="ReasonInput" v-model="fields.reason" required>
-                <option>Just to say HI</option>
+                <option selected>Just to say HI</option>
                 <option>Business</option>
                 <option>Software</option>
                 <option>Social Media</option>

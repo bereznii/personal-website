@@ -81,13 +81,4 @@ class HomeController extends Controller
         return view('admin.openletter', ['uri' => $uri, 'letter' => $letter]);
     }
 
-    /**
-     * Get current URI.
-     */
-    protected function getCurrentURI()
-    {
-        $url = URL::current();
-        $uri = array_reverse(explode('/', $url))[0];
-        return $uri;
-    }
 }
