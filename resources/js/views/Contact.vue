@@ -57,7 +57,7 @@
           this.loaded = false;
           this.success = false;
           this.errors = {};
-          axios.post('/send_email', this.fields).then(response => {
+          axios.post('send_email', this.fields).then(response => {
             this.fields = {}; //Clear input fields.
             this.loaded = true;
             this.success = true;

@@ -10,13 +10,13 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item text-center">
-                            <router-link class="nav-link" :to="{ name: 'mywork' }">My Work</router-link>
+                            <router-link class="nav-link" @click.native="closeMenu()" :to="{ name: 'mywork' }">My Work</router-link>
                         </li>
                         <li class="nav-item text-center">
-                            <router-link class="nav-link" :to="{ name: 'software' }">Software</router-link>
+                            <router-link class="nav-link" @click.native="closeMenu()" :to="{ name: 'software' }">Software</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link text-center" :to="{ name: 'contact' }">Contact</router-link>
+                            <router-link class="nav-link text-center" @click.native="closeMenu()" :to="{ name: 'contact' }">Contact</router-link>
                         </li>
                     </ul>
                 </div>
@@ -42,11 +42,11 @@
         <footer class="bg-black py-4">
             <div class="container">
             <div class="row justify-content-center">
-                <div class="col col-md"><router-link class='text-light' :to="{ name: 'mywork' }">My Work</router-link></div>
+                <div class="col col-md"><router-link class='text-light' @click.native="closeMenu()" :to="{ name: 'mywork' }">My Work</router-link></div>
                 <div class="delimiter col col-md text-light">|</div>
-                <div class="col col-md"><router-link class='text-light' :to="{ name: 'software' }">Software</router-link></div>
+                <div class="col col-md"><router-link class='text-light' @click.native="closeMenu()" :to="{ name: 'software' }">Software</router-link></div>
                 <div class="delimiter col col-md text-light">|</div>
-                <div class="col col-md"><router-link class='text-light' :to="{ name: 'contact' }">Contact</router-link></div>
+                <div class="col col-md"><router-link class='text-light' @click.native="closeMenu()" :to="{ name: 'contact' }">Contact</router-link></div>
             </div>
             <!--<div class="small text-center text-muted">Copyright &copy; {{date("Y")}} - Dmytro Bereznii</div>-->
             </div>
@@ -79,6 +79,9 @@
                     header.classList.remove('py-2');
                     header.classList.add('py-4');
                 }
+            },
+            closeMenu() {
+                $('#navbarResponsive').collapse('hide');
             }
         },
         created () {

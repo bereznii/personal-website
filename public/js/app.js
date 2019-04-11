@@ -1823,7 +1823,7 @@ __webpack_require__.r(__webpack_exports__);
         this.loaded = false;
         this.success = false;
         this.errors = {};
-        axios.post('/send_email', this.fields).then(function (response) {
+        axios.post('send_email', this.fields).then(function (response) {
           _this.fields = {}; //Clear input fields.
 
           _this.loaded = true;
@@ -2018,6 +2018,9 @@ __webpack_require__.r(__webpack_exports__);
         header.classList.remove('py-2');
         header.classList.add('py-4');
       }
+    },
+    closeMenu: function closeMenu() {
+      $('#navbarResponsive').collapse('hide');
     }
   },
   created: function created() {
@@ -2039,12 +2042,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -37536,13 +37533,13 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "text-light" }, [
           _vm._v(
-            "I am a computer systems and network course student, who is interested in designing and developing computer networks and web-development overall. \n      Not the best student and not one of those who learn everything by heart, to pretend they understand it. \n      But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into practice."
+            "I am a computer systems and network course student, who is interested in designing and developing computer networks and web-development overall. \n      Not the best student and not one of those who study everything, that they not even interested in, without any purpose.\n      But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into life."
           )
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "text-light" }, [
           _vm._v(
-            "Want to build scalable and distributed architectures and work with processes automatization."
+            "I want to build scalable, distributed web-applications and work with processes automatization."
           )
         ])
       ])
@@ -37588,9 +37585,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("li", [_vm._v("Testing")]),
         _vm._v(" "),
-        _c("li", [_vm._v("More practice with JavaScript, NodeJS?")]),
+        _c("li", [_vm._v("Work more with JavaScript, maybe NodeJS")]),
         _vm._v(" "),
-        _c("li", [_vm._v("General purpose language, such as Python or C#")]),
+        _c("li", [_vm._v("General-purpose language, such as Python or C#")]),
         _vm._v(" "),
         _c("li", [_vm._v("Blockchain")])
       ]),
@@ -37661,7 +37658,12 @@ var render = function() {
                         "router-link",
                         {
                           staticClass: "nav-link",
-                          attrs: { to: { name: "mywork" } }
+                          attrs: { to: { name: "mywork" } },
+                          nativeOn: {
+                            click: function($event) {
+                              return _vm.closeMenu()
+                            }
+                          }
                         },
                         [_vm._v("My Work")]
                       )
@@ -37677,7 +37679,12 @@ var render = function() {
                         "router-link",
                         {
                           staticClass: "nav-link",
-                          attrs: { to: { name: "software" } }
+                          attrs: { to: { name: "software" } },
+                          nativeOn: {
+                            click: function($event) {
+                              return _vm.closeMenu()
+                            }
+                          }
                         },
                         [_vm._v("Software")]
                       )
@@ -37693,7 +37700,12 @@ var render = function() {
                         "router-link",
                         {
                           staticClass: "nav-link text-center",
-                          attrs: { to: { name: "contact" } }
+                          attrs: { to: { name: "contact" } },
+                          nativeOn: {
+                            click: function($event) {
+                              return _vm.closeMenu()
+                            }
+                          }
                         },
                         [_vm._v("Contact")]
                       )
@@ -37759,7 +37771,12 @@ var render = function() {
                   "router-link",
                   {
                     staticClass: "text-light",
-                    attrs: { to: { name: "mywork" } }
+                    attrs: { to: { name: "mywork" } },
+                    nativeOn: {
+                      click: function($event) {
+                        return _vm.closeMenu()
+                      }
+                    }
                   },
                   [_vm._v("My Work")]
                 )
@@ -37779,7 +37796,12 @@ var render = function() {
                   "router-link",
                   {
                     staticClass: "text-light",
-                    attrs: { to: { name: "software" } }
+                    attrs: { to: { name: "software" } },
+                    nativeOn: {
+                      click: function($event) {
+                        return _vm.closeMenu()
+                      }
+                    }
                   },
                   [_vm._v("Software")]
                 )
@@ -37799,7 +37821,12 @@ var render = function() {
                   "router-link",
                   {
                     staticClass: "text-light",
-                    attrs: { to: { name: "contact" } }
+                    attrs: { to: { name: "contact" } },
+                    nativeOn: {
+                      click: function($event) {
+                        return _vm.closeMenu()
+                      }
+                    }
                   },
                   [_vm._v("Contact")]
                 )
@@ -37985,11 +38012,11 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "text-light" }, [
           _vm._v(
-            "\n      The main problem, which led to creation of this 'platform' was lack of real-life experience of creation and deploying web-applications. bereznii.me allows me to practice in different technologies on full cycle of project's lifespan: form designing to deploying."
+            "\n      The main problem, which led to creation of this 'platform' was lack of real-life experience of creation and deploying web-applications. bereznii.xyz allows me to work with different technologies on full cycle of project's lifespan: form designing to deploying."
           ),
           _c("br"),
           _vm._v(
-            "\n      It is built mainly using PHP based on Laravel Framework and JS on Vue.js."
+            "\n      It is built using PHP based on Laravel Framework and JS on Vue.js."
           ),
           _c("br")
         ])
@@ -38005,7 +38032,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row stack-text" }, [
-          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
+          _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [
             _c("h5", { staticClass: "p-heading" }, [_vm._v("Front-end")]),
             _vm._v(" "),
             _c("p", { staticClass: "p-subheading" }, [_vm._v("HTML, CSS, JS")]),
@@ -38025,7 +38052,7 @@ var staticRenderFns = [
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
+          _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [
             _c("h5", { staticClass: "p-heading" }, [_vm._v("Back-end")]),
             _vm._v(" "),
             _c("p", { staticClass: "p-subheading" }, [_vm._v("PHP")]),
@@ -38033,19 +38060,19 @@ var staticRenderFns = [
             _c("ul", [_c("li", [_vm._v("Laravel Application")])])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
+          _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [
             _c("h5", [_vm._v("Security")]),
             _vm._v(" "),
             _c("p", { staticClass: "p-subheading" }, [_vm._v("Laravel")]),
             _vm._v(" "),
             _c("ul", [
-              _c("li", [_vm._v("Basic Laravel Authentication for me")]),
+              _c("li", [_vm._v("Laravel Authentication")]),
               _vm._v(" "),
               _c("li", [_vm._v("Laravel Validation")])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
+          _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [
             _c("h5", [_vm._v("Database")]),
             _vm._v(" "),
             _c("p", { staticClass: "p-subheading" }, [_vm._v("MySQL")]),
@@ -38055,14 +38082,6 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("li", [_vm._v("Laravel Queues")])
             ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-12 py-xs-3 col-lg" }, [
-            _c("h5", [_vm._v("Deployment")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "p-subheading" }),
-            _vm._v(" "),
-            _c("ul", [_c("li", [_vm._v("...")])])
           ])
         ])
       ])

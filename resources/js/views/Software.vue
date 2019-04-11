@@ -40,8 +40,8 @@
       <h2 class='text-uppercase'>This Platform</h2>
       <p class="text-uppercase pb-1 stack-text">Idea behind it</p>
       <p class='text-light'>
-      The main problem, which led to creation of this 'platform' was lack of real-life experience of creation and deploying web-applications. bereznii.me allows me to practice in different technologies on full cycle of project's lifespan: form designing to deploying.<br>
-      It is built mainly using PHP based on Laravel Framework and JS on Vue.js.<br>
+      The main problem, which led to creation of this 'platform' was lack of real-life experience of creation and deploying web-applications. bereznii.xyz allows me to work with different technologies on full cycle of project's lifespan: form designing to deploying.<br>
+      It is built using PHP based on Laravel Framework and JS on Vue.js.<br>
       </p>
     </div>
 
@@ -50,39 +50,33 @@
       <h2 class='text-uppercase'>Technology stack</h2>
       <p class="text-uppercase pb-3 stack-text">My Website Architecture</p>
       <div class="row stack-text">
-        <div class='col-sm-12 py-xs-3 col-lg'><h5 class='p-heading'>Front-end</h5>
+        <div class='col-sm-12 py-xs-4 col-lg'><h5 class='p-heading'>Front-end</h5>
           <p class="p-subheading">HTML, CSS, JS</p>
           <ul>
             <li>Single page web-application built with Vue.js and Vue Router</li>
             <li>Multi-page, server rendered web-application built with Laravel and Laravel Blade</li>
           </ul>
         </div>  
-        <div class='col-sm-12 py-xs-3 col-lg'><h5 class='p-heading'>Back-end</h5>
+        <div class='col-sm-12 py-xs-4 col-lg'><h5 class='p-heading'>Back-end</h5>
           <p class="p-subheading">PHP</p>
           <ul>
             <li>Laravel Application</li>
           </ul>
         </div>  
-        <div class='col-sm-12 py-xs-3 col-lg'><h5>Security</h5>
+        <div class='col-sm-12 py-xs-4 col-lg'><h5>Security</h5>
           <p class="p-subheading">Laravel</p>
           <ul>
-            <li>Basic Laravel Authentication for me</li>
+            <li>Laravel Authentication</li>
             <li>Laravel Validation</li>
           </ul>
         </div> 
-        <div class='col-sm-12 py-xs-3 col-lg'><h5>Database</h5>
+        <div class='col-sm-12 py-xs-4 col-lg'><h5>Database</h5>
           <p class="p-subheading">MySQL</p>
           <ul>
             <li>All saved data</li>
             <li>Laravel Queues</li>
           </ul>
-        </div>  
-        <div class='col-sm-12 py-xs-3 col-lg'><h5>Deployment</h5>
-          <p class="p-subheading"></p>
-          <ul>
-            <li>...</li>
-          </ul>
-        </div>  
+        </div>
       </div>
     </div>
   </section>

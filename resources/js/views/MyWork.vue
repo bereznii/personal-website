@@ -19,9 +19,9 @@
     <div class="container py-5">
       <h2 class='text-uppercase pb-5'>My Work</h2>
       <p class='text-light'>I am a computer systems and network course student, who is interested in designing and developing computer networks and web-development overall. 
-      Not the best student and not one of those who learn everything by heart, to pretend they understand it. 
-      But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into practice.</p>
-      <p class="text-light">Want to build scalable and distributed architectures and work with processes automatization.</p>
+      Not the best student and not one of those who study everything, that they not even interested in, without any purpose.
+      But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into life.</p>
+      <p class="text-light">I want to build scalable, distributed web-applications and work with processes automatization.</p>
     </div>
   </section>
 
@@ -58,8 +58,8 @@
           <li>Any NoSQL, such as MongoDB, Memcached or Redis</li>
           <li>Security</li>
           <li>Testing</li>
-          <li>More practice with JavaScript, NodeJS?</li>
-          <li>General purpose language, such as Python or C#</li>
+          <li>Work more with JavaScript, maybe NodeJS</li>
+          <li>General-purpose language, such as Python or C#</li>
           <li>Blockchain</li>
         </ul>
         <p>This list built from interests in my head right now, so it may vary over time. You can read more about my technology stack on the software page.</p>

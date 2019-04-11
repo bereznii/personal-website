@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Auth;
 
+use App\User;
 use App\Project;
 use App\History;
 use App\Letter;
@@ -19,6 +21,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        
     }
 
     /**
@@ -54,6 +57,8 @@ class HomeController extends Controller
         foreach($history as $record) {
             $payloads[] = json_decode($record->payload);
         }
+
+        $payloads = $payloads ?? [];
 
         $uri = $this->getCurrentURI();
         return view('admin.jobs', ['uri' => $uri, 'history' => $history, 'payloads' => $payloads]);
