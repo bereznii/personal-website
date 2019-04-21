@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="My name is Dmytro Bereznii and I am a computer systems and network course student, who is interested in designing scalable, distributed web-applications, work with processes automatization and web-development overall.">
+  <meta name="author" content="Dmytro Bereznii">
 
   <title>Bereznii</title>
 
