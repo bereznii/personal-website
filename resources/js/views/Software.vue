@@ -49,7 +49,7 @@
                     <div class='col-sm-12 py-xs-4 col-lg'><h5 class='p-heading'>Front-end</h5>
                         <p class="p-subheading">HTML, CSS, JS</p>
                         <ul>
-                            <li>JQuery and Native JS, tried Vue.js once)</li>
+                            <li>JQuery and native JS, tried Vue.js once)</li>
                             <li>Blade and Twig templating engines</li>
                         </ul>
                     </div>
@@ -62,7 +62,7 @@
                         </ul>
                     </div>
                     <div class='col-sm-12 py-xs-4 col-lg'><h5>Security</h5>
-                        <p class="p-subheading">Laravel</p>
+                        <p class="p-subheading">Token based</p>
                         <ul>
                           <li>Basic Auth</li>
                           <li>JWT</li>
@@ -79,15 +79,18 @@
                         </ul>
                     </div>
                     <div class='col-sm-12 py-xs-4 col-lg'><h5>Testing</h5>
-                        <p class="p-subheading">SQL & NoSQL</p>
+                        <p class="p-subheading">Unit testing</p>
                         <ul>
                             <li>PHP Unit</li>
                         </ul>
                     </div>
-                    <div class='col-sm-12 py-xs-4 col-lg'><h5>Containerization</h5>
-                        <p class="p-subheading">SQL & NoSQL</p>
+                    <div class='col-sm-12 py-xs-4 col-lg'><h5>Deployment</h5>
+                        <p class="p-subheading">Containerization</p>
                         <ul>
                             <li>Docker</li>
+                            <li>Nginx</li>
+                            <li>PHP-FPM</li>
+                            <li>Apache</li>
                         </ul>
                     </div>
                 </div>

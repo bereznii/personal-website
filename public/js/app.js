@@ -2127,6 +2127,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['projects']
 });
@@ -38028,7 +38043,7 @@ var staticRenderFns = [
             _c("p", { staticClass: "p-subheading" }, [_vm._v("HTML, CSS, JS")]),
             _vm._v(" "),
             _c("ul", [
-              _c("li", [_vm._v("JQuery and Native JS, tried Vue.js once)")]),
+              _c("li", [_vm._v("JQuery and native JS, tried Vue.js once)")]),
               _vm._v(" "),
               _c("li", [_vm._v("Blade and Twig templating engines")])
             ])
@@ -38051,19 +38066,19 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [
             _c("h5", [_vm._v("Security")]),
             _vm._v(" "),
-            _c("p", { staticClass: "p-subheading" }, [_vm._v("Laravel")]),
+            _c("p", { staticClass: "p-subheading" }, [_vm._v("Token based")]),
             _vm._v(" "),
             _c("ul", [
-              _c("li", [_vm._v("Basic auth")]),
+              _c("li", [_vm._v("Basic Auth")]),
               _vm._v(" "),
               _c("li", [_vm._v("JWT")]),
               _vm._v(" "),
-              _c("li", [_vm._v("OAuth")])
+              _c("li", [_vm._v("OAuth2")])
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [
-            _c("h5", [_vm._v("Storage")]),
+            _c("h5", [_vm._v("Data")]),
             _vm._v(" "),
             _c("p", { staticClass: "p-subheading" }, [_vm._v("SQL & NoSQL")]),
             _vm._v(" "),
@@ -38075,6 +38090,32 @@ var staticRenderFns = [
               _c("li", [_vm._v("Redis")]),
               _vm._v(" "),
               _c("li", [_vm._v("Memcache")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [
+            _c("h5", [_vm._v("Testing")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "p-subheading" }, [_vm._v("Unit testing")]),
+            _vm._v(" "),
+            _c("ul", [_c("li", [_vm._v("PHP Unit")])])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [
+            _c("h5", [_vm._v("Deployment")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "p-subheading" }, [
+              _vm._v("Containerization")
+            ]),
+            _vm._v(" "),
+            _c("ul", [
+              _c("li", [_vm._v("Docker")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Nginx")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("PHP-FPM")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Apache")])
             ])
           ])
         ])
