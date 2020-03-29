@@ -27,15 +27,16 @@
         <!-- Contact Section -->
         <section class="bg-dark page-section py-5">
             <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                <h5 class="mt-0 pb-4 text-light text-uppercase">Stay Connected</h5>
-                <a href='https://www.instagram.com/bereznii_/'><img class='contact-icon' src="/img/instagram.svg"></a>
-                <a href='https://www.facebook.com/profile.php?id=100008971929484'><img class='contact-icon' src="/img/facebook.svg"></a>
-                <a href='https://www.linkedin.com/in/dmytro-bereznii'><img class='contact-icon' src="/img/linkedin.svg"></a>
-                <router-link class='text-light' :to="{ name: 'contact' }"><img class='contact-icon' src="/img/mail.svg"></router-link>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                    <h5 class="mt-0 pb-4 text-light text-uppercase">Stay Connected</h5>
+                    <a href='https://www.instagram.com/bereznii_/'><img class='contact-icon' src="/img/instagram.svg"></a>
+                    <a href='https://github.com/bereznii'><img class='contact-icon' src="/img/github.png"></a>
+                    <a href='https://www.facebook.com/profile.php?id=100008971929484'><img class='contact-icon' src="/img/facebook.svg"></a>
+                    <a href='https://www.linkedin.com/in/dmytro-bereznii'><img class='contact-icon' src="/img/linkedin.svg"></a>
+                    <router-link class='text-light' :to="{ name: 'contact' }"><img class='contact-icon' src="/img/mail.svg"></router-link>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
 

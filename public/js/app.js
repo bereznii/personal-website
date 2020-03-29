@@ -1921,6 +1921,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['projects']
 });
@@ -1936,6 +1942,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -37533,7 +37540,30 @@ var staticRenderFns = [
                   )
                 ]
               )
-            ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-lg-8 d-flex flex-column justify-content-center align-items-center mb-2",
+                staticStyle: { position: "absolute", bottom: "0" }
+              },
+              [
+                _c(
+                  "h4",
+                  { staticClass: "text-white-75 font-weight-light mb-3" },
+                  [_vm._v("Read more")]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-light" }, [
+                  _c("i", {
+                    staticClass: "fas fa-angle-double-down",
+                    staticStyle: { "font-size": "1.75rem" }
+                  })
+                ])
+              ]
+            )
           ]
         )
       ])
@@ -37758,6 +37788,8 @@ var render = function() {
                 _vm._v(" "),
                 _vm._m(3),
                 _vm._v(" "),
+                _vm._m(4),
+                _vm._v(" "),
                 _c(
                   "router-link",
                   {
@@ -37893,6 +37925,17 @@ var staticRenderFns = [
         })
       ]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "https://github.com/bereznii" } }, [
+      _c("img", {
+        staticClass: "contact-icon",
+        attrs: { src: "/img/github.png" }
+      })
+    ])
   },
   function() {
     var _vm = this

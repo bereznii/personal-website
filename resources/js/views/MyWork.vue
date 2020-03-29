@@ -1,18 +1,24 @@
 <template>
 <div id="mywork-view">
-  <!-- Masthead -->
-  <header class="masthead">
-    <div class="container h-100">
-      <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-lg-8 align-self-end">
-          <h1 class="text-uppercase text-white">Dmytro<br> Bereznii</h1>
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-uppercase text-white">Dmytro<br> Bereznii</h1>
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <h4 class="text-white-75 font-weight-light mb-5">Self-learning software engineering and architecture through research & development.</h4>
+                </div>
+                <div class="col-lg-8 d-flex flex-column justify-content-center align-items-center mb-2" style="position: absolute; bottom: 0;">
+                    <h4 class="text-white-75 font-weight-light mb-3">Read more</h4>
+                    <div class="text-light">
+                        <i class="fas fa-angle-double-down" style="font-size: 1.75rem"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-8 align-self-baseline">
-          <h4 class="text-white-75 font-weight-light mb-5">Self-learning software engineering and architecture through research & development.</h4>
-        </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
   <!-- About My Work -->
   <section class="page-section bg-black">
