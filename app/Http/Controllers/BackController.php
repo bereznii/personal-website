@@ -23,18 +23,16 @@ class BackController extends Controller
             'email' => 'required|email|max:255',
             'message' => 'required|max:65000',
         ]);
-        
+
         /**
-         * Jobs are separate to play it save and avoid situation when letter won't be neither sent, nor saved
-         * 
-         * Letter will be saved independently whether it sent or not 
+         * Jobs are separate to play it safe and avoid situation when letter won't be neither sent, nor saved
+         *
+         * Letter will be saved independently whether it sent or not
          */
 
         SaveLetterJob::dispatch($request->all())->delay(now()->addSeconds(5));
         SendEmailJob::dispatch($request->all())->delay(now()->addSeconds(5));
 
         return response()->json(null, 200);
-        
     }
-
 }

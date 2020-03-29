@@ -21,7 +21,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        
+
     }
 
     /**
@@ -41,7 +41,7 @@ class HomeController extends Controller
      */
     public function projects()
     {
-        $projects = Project::get();
+        $projects = Project::all();
         $uri = $this->getCurrentURI();
         return view('admin.projects', ['uri' => $uri, 'projects' => $projects]);
     }

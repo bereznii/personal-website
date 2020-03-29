@@ -13,4 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::apiResource('projects', 'API\ProjectController');
+Route::resource('projects', 'API\ProjectController');

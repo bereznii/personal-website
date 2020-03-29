@@ -32,7 +32,7 @@
                 <h5 class="mt-0 pb-4 text-light text-uppercase">Stay Connected</h5>
                 <a href='https://www.instagram.com/bereznii_/'><img class='contact-icon' src="/img/instagram.svg"></a>
                 <a href='https://www.facebook.com/profile.php?id=100008971929484'><img class='contact-icon' src="/img/facebook.svg"></a>
-                <a href='https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%B1%D0%B5%D1%80%D0%B5%D0%B7%D0%BD%D0%B8%D0%B9-75173b177/'><img class='contact-icon' src="/img/linkedin.svg"></a>
+                <a href='https://www.linkedin.com/in/dmytro-bereznii'><img class='contact-icon' src="/img/linkedin.svg"></a>
                 <router-link class='text-light' :to="{ name: 'contact' }"><img class='contact-icon' src="/img/mail.svg"></router-link>
                 </div>
             </div>
@@ -41,14 +41,13 @@
 
         <footer class="bg-black py-4">
             <div class="container">
-            <div class="row justify-content-center">
-                <div class="col col-md"><router-link class='text-light' @click.native="closeMenu()" :to="{ name: 'mywork' }">My Work</router-link></div>
-                <div class="delimiter col col-md text-light">|</div>
-                <div class="col col-md"><router-link class='text-light' @click.native="closeMenu()" :to="{ name: 'software' }">Software</router-link></div>
-                <div class="delimiter col col-md text-light">|</div>
-                <div class="col col-md"><router-link class='text-light' @click.native="closeMenu()" :to="{ name: 'contact' }">Contact</router-link></div>
-            </div>
-            <!--<div class="small text-center text-muted">Copyright &copy; {{date("Y")}} - Dmytro Bereznii</div>-->
+                <div class="row justify-content-center">
+                    <div class="col col-md"><router-link class='text-light' @click.native="closeMenu()" :to="{ name: 'mywork' }">My Work</router-link></div>
+                    <div class="delimiter col col-md text-light">|</div>
+                    <div class="col col-md"><router-link class='text-light' @click.native="closeMenu()" :to="{ name: 'software' }">Software</router-link></div>
+                    <div class="delimiter col col-md text-light">|</div>
+                    <div class="col col-md"><router-link class='text-light' @click.native="closeMenu()" :to="{ name: 'contact' }">Contact</router-link></div>
+                </div>
             </div>
         </footer>
     </div>
@@ -70,7 +69,7 @@
                 let header = document.querySelector("#mainNav");
                 if (window.scrollY > 100 && !header.className.includes('v-toolbar--bgchange')) {
                     header.classList.remove('navbar-notscrolled');
-                    header.classList.add('navbar-scrolled'); 
+                    header.classList.add('navbar-scrolled');
                     header.classList.remove('py-4');
                     header.classList.add('py-2');
                 } else if (window.scrollY < 100) {

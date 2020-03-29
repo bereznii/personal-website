@@ -18,9 +18,11 @@
   <section class="page-section bg-black">
     <div class="container py-5">
       <h2 class='text-uppercase pb-5'>My Work</h2>
-      <p class='text-light'>I am a computer systems and network course student, who is interested in designing and developing computer networks and web-development overall. 
-      Not the best student and not one of those who study everything, that they not even interested in, without any purpose.
-      But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into life.</p>
+      <p class='text-light'>I am a computer systems and network course student at National Aviation University, Kyiv, Ukraine.
+          Interested in designing and developing web-applications and web-development overall.
+          Not the best student and not one of those who study everything, that they not interested in, without any purpose,
+          just because they were told to.
+          But I am a curious type of person, who likes to understand things, and even more so, be able to put this knowledge into life.</p>
       <p class="text-light">I want to build scalable, distributed web-applications and work with processes automatization.</p>
     </div>
   </section>
@@ -33,7 +35,7 @@
           <thead>
             <tr>
               <th scope="col">Title</th>
-              <th scope="col">Description</th>
+              <th scope="col">Technologies</th>
               <th scope="col">Language</th>
               <th scope="col">Updated</th>
             </tr>
@@ -51,16 +53,15 @@
 
     <!-- Ventures Section -->
     <div class="container py-4">
-        <h5 class='h5spacing'>Future Ventures (interested in 2019)</h5>
+        <h5 class='h5spacing'>Future Ventures (interested in 2020)</h5>
         <ul>
           <li>Scalable distributed systems (infrastructure, networks, microservices)</li>
-          <li>MySQL for complex queries</li>
-          <li>Any NoSQL, such as MongoDB, Memcached or Redis</li>
+          <li>MySQL / PostgreSQL</li>
+          <li>Any NoSQL, such as MongoDB, or Redis</li>
           <li>Security</li>
           <li>Testing</li>
-          <li>Work more with JavaScript, maybe NodeJS</li>
-          <li>General-purpose language, such as Python or C#</li>
-          <li>Blockchain</li>
+          <li>Work more with native JavaScript, maybe any framework (Vue/React)</li>
+          <li>Try out functional programming with Go or C</li>
         </ul>
         <p>This list built from interests in my head right now, so it may vary over time. You can read more about my technology stack on the software page.</p>
     </div>
