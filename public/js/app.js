@@ -2149,6 +2149,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['projects']
 });
@@ -38088,6 +38090,8 @@ var staticRenderFns = [
             _c("ul", [
               _c("li", [_vm._v("JQuery and native JS, tried Vue.js once)")]),
               _vm._v(" "),
+              _c("li", [_vm._v("Bootstrap 3/4")]),
+              _vm._v(" "),
               _c("li", [_vm._v("Blade and Twig templating engines")])
             ])
           ]),
@@ -38139,9 +38143,17 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [
             _c("h5", [_vm._v("Testing")]),
             _vm._v(" "),
-            _c("p", { staticClass: "p-subheading" }, [_vm._v("Unit testing")]),
+            _c("p", { staticClass: "p-subheading" }, [
+              _vm._v("Automation testing")
+            ]),
             _vm._v(" "),
-            _c("ul", [_c("li", [_vm._v("PHP Unit")])])
+            _c("ul", [
+              _c("li", [_vm._v("PHPUnit")]),
+              _vm._v(" "),
+              _c("li", [
+                _vm._v("Static code analyzers, such as PHPStan and Larastan")
+              ])
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-sm-12 py-xs-4 col-lg" }, [

@@ -50,6 +50,7 @@
                         <p class="p-subheading">HTML, CSS, JS</p>
                         <ul>
                             <li>JQuery and native JS, tried Vue.js once)</li>
+                            <li>Bootstrap 3/4</li>
                             <li>Blade and Twig templating engines</li>
                         </ul>
                     </div>
@@ -79,9 +80,10 @@
                         </ul>
                     </div>
                     <div class='col-sm-12 py-xs-4 col-lg'><h5>Testing</h5>
-                        <p class="p-subheading">Unit testing</p>
+                        <p class="p-subheading">Automation testing</p>
                         <ul>
-                            <li>PHP Unit</li>
+                            <li>PHPUnit</li>
+                            <li>Static code analyzers, such as PHPStan and Larastan</li>
                         </ul>
                     </div>
                     <div class='col-sm-12 py-xs-4 col-lg'><h5>Deployment</h5>
