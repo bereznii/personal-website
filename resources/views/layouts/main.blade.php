@@ -8,6 +8,8 @@
   <meta name="description" content="My name is Dmytro Bereznii and I am a computer systems and network course student, who is interested in designing scalable, distributed web-applications, work with processes automatization and web-development overall.">
   <meta name="author" content="Dmytro Bereznii">
 
+  <link rel="icon" href="{{ asset('img/circle-cropped.ico') }}" type="image/icon type">
+
   <title>Bereznii</title>
 
   <!-- CSRF Token -->
