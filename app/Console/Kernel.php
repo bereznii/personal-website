@@ -24,9 +24,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        //update projects every hour
         $schedule->command('command:updateprojects')
-                  ->hourly();
+            ->timezone('Europe/Kiev')
+            ->at('02:00')
+            ->environments(['production']);
     }
 
     /**
