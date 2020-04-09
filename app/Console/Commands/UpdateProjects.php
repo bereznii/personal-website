@@ -40,9 +40,6 @@ class UpdateProjects extends Command
      */
     public function handle()
     {
-        //clear table
-        Project::truncate();
-
         $client = new \GuzzleHttp\Client();
 
         $res = $client->request('GET', 'https://api.github.com/users/bereznii/repos');
@@ -50,18 +47,18 @@ class UpdateProjects extends Command
         $repositories = json_decode($res->getBody());
 
         foreach($repositories as $repo) {
-            $project = new Project;
-
-            $project->name = $repo->name;
-            $project->html_url = $repo->html_url;
-            $project->language = $repo->language;
-            $project->size = $repo->size;
-            $project->description = '';
-            $project->commits = $this->countCommits($repo->name);
-            $project->created = date("Y-m-d", strtotime($repo->created_at));
-            $project->updated = date("Y-m-d", strtotime($repo->updated_at));
-
-            $project->save();
+            Project::updateOrCreate([
+                    'name' => $repo->name
+                ],
+                [
+                    'html_url' => $repo->html_url,
+                    'language' => $repo->language ?? '',
+                    'size' => $repo->size,
+                    'description' => '',
+                    'commits' => $this->countCommits($repo->name),
+                    'created' => date("Y-m-d", strtotime($repo->created_at)),
+                    'updated' => date("Y-m-d", strtotime($repo->updated_at)),
+                ]);
         }
 
         //saving job
