@@ -30,9 +30,9 @@ class BackController extends Controller
          * Letter will be saved independently whether it sent or not
          */
 
-        SaveLetterJob::dispatch($request->all())->delay(now()->addSeconds(5));
-        SendEmailJob::dispatch($request->all())->delay(now()->addSeconds(5));
+        SaveLetterJob::dispatch($request->all());
+        SendEmailJob::dispatch($request->all());
 
-        return response()->json(null, 200);
+        return response()->json(['status' => 'success'], 200);
     }
 }
