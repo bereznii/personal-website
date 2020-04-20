@@ -47,18 +47,20 @@ class UpdateProjects extends Command
         $repositories = json_decode($res->getBody());
 
         foreach($repositories as $repo) {
+
             Project::updateOrCreate([
-                    'name' => $repo->name
-                ],
-                [
-                    'html_url' => $repo->html_url,
-                    'language' => $repo->language ?? '',
-                    'size' => $repo->size,
-                    'description' => '',
-                    'commits' => $this->countCommits($repo->name),
-                    'created' => date("Y-m-d", strtotime($repo->created_at)),
-                    'updated' => date("Y-m-d", strtotime($repo->updated_at)),
-                ]);
+                'name' => $repo->name
+            ],
+            [
+                'html_url' => $repo->html_url,
+                'language' => $repo->language ?? '',
+                'size' => $repo->size,
+                'description' => '',
+                'commits' => $this->countCommits($repo->name),
+                'created' => date("Y-m-d", strtotime($repo->created_at)),
+                'updated' => date("Y-m-d", strtotime($repo->updated_at)),
+            ]);
+
         }
 
         //saving job
@@ -78,13 +80,17 @@ class UpdateProjects extends Command
     private function countCommits(string $repoName): int
     {
         $client = new \GuzzleHttp\Client();
+
+        $prevCommits = Project::where('name', $repoName)->first()->commits;
         $commits = $client->request('GET', 'https://api.github.com/repos/bereznii/'.$repoName.'/stats/contributors');
 
         $count = 0;
         foreach (json_decode($commits->getBody(), 1) as $contributor) {
-            $count += $contributor['total'];
+            $count += (int)$contributor['total'];
         }
 
-        return $count;
+        return ($count !== 0)
+            ? $count
+            : $prevCommits;
     }
 }
