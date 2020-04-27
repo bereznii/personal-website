@@ -59,7 +59,8 @@
                         <ul>
                             <li>Native PHP</li>
                             <li>Laravel</li>
-                            <li>Yii</li>
+                            <li>Yii2</li>
+                            <li>Lumen</li>
                         </ul>
                     </div>
                     <div class='col-sm-12 py-xs-4 col-lg'><h5>Security</h5>
