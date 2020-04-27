@@ -2151,6 +2151,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['projects']
 });
@@ -38106,7 +38107,9 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("li", [_vm._v("Laravel")]),
               _vm._v(" "),
-              _c("li", [_vm._v("Yii")])
+              _c("li", [_vm._v("Yii2")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Lumen")])
             ])
           ]),
           _vm._v(" "),
