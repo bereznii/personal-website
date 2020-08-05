@@ -2,10 +2,12 @@
 
 namespace App\Console\Commands;
 
+use http\Exception\RuntimeException;
 use Illuminate\Console\Command;
 
 use App\Project;
 use App\History;
+use Illuminate\Support\Facades\Log;
 
 class UpdateProjects extends Command
 {
@@ -24,6 +26,12 @@ class UpdateProjects extends Command
     protected $description = 'Update projects repositories info';
 
     /**
+     * @var string used for github OAuth.
+     */
+    private string $clientId;
+    private string $clientSecret;
+
+    /**
      * Create a new command instance.
      *
      * @return void
@@ -31,6 +39,9 @@ class UpdateProjects extends Command
     public function __construct()
     {
         parent::__construct();
+
+        $this->clientId = config('github.clientId');
+        $this->clientSecret = config('github.clientSecret');
     }
 
     /**
@@ -71,6 +82,8 @@ class UpdateProjects extends Command
         $record->save();
 
         logger('project updated');
+
+        return 0;
     }
 
     /**
@@ -79,18 +92,32 @@ class UpdateProjects extends Command
      */
     private function countCommits(string $repoName): int
     {
-        $client = new \GuzzleHttp\Client();
+        try {
+            $client = new \GuzzleHttp\Client();
 
-        $prevCommits = Project::where('name', $repoName)->first()->commits;
-        $commits = $client->request('GET', 'https://api.github.com/repos/bereznii/'.$repoName.'/stats/contributors');
+            $repoInTable = Project::where('name', $repoName)->first();
 
-        $count = 0;
-        foreach (json_decode($commits->getBody(), 1) as $contributor) {
-            $count += (int)$contributor['total'];
+            $prevCommits = isset($repoInTable) ? $repoInTable->commits : 0;
+
+            $commits = $client->request('GET', 'https://api.github.com/repos/bereznii/'.$repoName.'/stats/contributors', [
+                'auth' => [
+                    $this->clientId,
+                    $this->clientSecret
+                ]
+            ]);
+
+            $count = 0;
+            foreach (json_decode($commits->getBody(), 1) as $contributor) {
+                $count += (int) $contributor['total'];
+            }
+
+            return ($count !== 0)
+                ? $count
+                : $prevCommits;
+        } catch (\Throwable $e) {
+            Log::error('Message: ' . $e->getMessage() . '. Repo name: ' . $repoName);
         }
 
-        return ($count !== 0)
-            ? $count
-            : $prevCommits;
+        throw new \RuntimeException('Error during project update: ' . $e->getMessage());
     }
 }
